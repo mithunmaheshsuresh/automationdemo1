@@ -1,47 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.0 on darwin)" generated="20210307 22:28:34.406" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.7.0 on darwin)" generated="20210307 22:48:17.250" rpa="false">
 <suite id="s1" name="Main" source="/Users/msuresh/PycharmProjects/automationdemo/tests/main.robot">
-<test id="s1-t1" name="Verify user is able to register with valid credentials">
+<test id="s1-t1" name="User is able to navigate to website and view the content">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>http://automationpractice.com/index.php</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210307 22:28:34.548" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20210307 22:28:34.548" endtime="20210307 22:28:48.973"></status>
+<msg timestamp="20210307 22:48:17.405" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210307 22:48:17.404" endtime="20210307 22:48:22.316"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css:img.logo</arg>
 </arguments>
-<msg timestamp="20210307 22:28:48.997" level="INFO">Current page contains element 'css:img.logo'.</msg>
-<status status="PASS" starttime="20210307 22:28:48.974" endtime="20210307 22:28:48.997"></status>
+<msg timestamp="20210307 22:48:22.341" level="INFO">Current page contains element 'css:img.logo'.</msg>
+<status status="PASS" starttime="20210307 22:48:22.317" endtime="20210307 22:48:22.341"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css:input[class^=search_query]</arg>
 </arguments>
-<msg timestamp="20210307 22:28:49.007" level="INFO">Current page contains element 'css:input[class^=search_query]'.</msg>
-<status status="PASS" starttime="20210307 22:28:48.997" endtime="20210307 22:28:49.007"></status>
+<msg timestamp="20210307 22:48:22.351" level="INFO">Current page contains element 'css:input[class^=search_query]'.</msg>
+<status status="PASS" starttime="20210307 22:48:22.341" endtime="20210307 22:48:22.351"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210307 22:48:22.351" endtime="20210307 22:48:22.437"></status>
+</kw>
+<tags>
+<tag>SiteEntry</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:48:17.404" endtime="20210307 22:48:22.437" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Already registered user is not allowed to register">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com/index.php</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:48:22.439" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210307 22:48:22.439" endtime="20210307 22:48:26.850"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css:img.logo</arg>
+</arguments>
+<msg timestamp="20210307 22:48:26.862" level="INFO">Current page contains element 'css:img.logo'.</msg>
+<status status="PASS" starttime="20210307 22:48:26.851" endtime="20210307 22:48:26.862"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css:input[class^=search_query]</arg>
+</arguments>
+<msg timestamp="20210307 22:48:26.871" level="INFO">Current page contains element 'css:input[class^=search_query]'.</msg>
+<status status="PASS" starttime="20210307 22:48:26.862" endtime="20210307 22:48:26.871"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>css:a[class^=login]</arg>
 </arguments>
-<msg timestamp="20210307 22:28:49.007" level="INFO">Clicking element 'css:a[class^=login]'.</msg>
-<status status="PASS" starttime="20210307 22:28:49.007" endtime="20210307 22:28:50.873"></status>
+<msg timestamp="20210307 22:48:26.872" level="INFO">Clicking element 'css:a[class^=login]'.</msg>
+<status status="PASS" starttime="20210307 22:48:26.872" endtime="20210307 22:48:28.034"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#email_create</arg>
 </arguments>
-<msg timestamp="20210307 22:28:50.884" level="INFO">Current page contains element 'css=#email_create'.</msg>
-<status status="PASS" starttime="20210307 22:28:50.873" endtime="20210307 22:28:50.884"></status>
+<msg timestamp="20210307 22:48:28.048" level="INFO">Current page contains element 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210307 22:48:28.034" endtime="20210307 22:48:28.048"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=#email_create</arg>
+<arg>test@demo.com</arg>
+</arguments>
+<msg timestamp="20210307 22:48:28.048" level="INFO">Typing text 'test@demo.com' into text field 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210307 22:48:28.048" endtime="20210307 22:48:28.222"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#SubmitCreate</arg>
+</arguments>
+<msg timestamp="20210307 22:48:28.222" level="INFO">Clicking element 'css=#SubmitCreate'.</msg>
+<status status="PASS" starttime="20210307 22:48:28.222" endtime="20210307 22:48:28.271"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>css=#create_account_error &gt; ol &gt; li</arg>
+<arg>An account using this email address has already been registered. Please enter a valid password or request a new one.</arg>
+</arguments>
+<status status="PASS" starttime="20210307 22:48:28.272" endtime="20210307 22:48:29.560"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210307 22:48:29.560" endtime="20210307 22:48:29.650"></status>
+</kw>
+<tags>
+<tag>InvalidLogin</tag>
+</tags>
+<status status="PASS" starttime="20210307 22:48:22.438" endtime="20210307 22:48:29.651" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Verify user is able to register with valid credentials">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com/index.php</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210307 22:48:29.653" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210307 22:48:29.653" endtime="20210307 22:48:35.860"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css:img.logo</arg>
+</arguments>
+<msg timestamp="20210307 22:48:35.885" level="INFO">Current page contains element 'css:img.logo'.</msg>
+<status status="PASS" starttime="20210307 22:48:35.861" endtime="20210307 22:48:35.885"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css:input[class^=search_query]</arg>
+</arguments>
+<msg timestamp="20210307 22:48:35.894" level="INFO">Current page contains element 'css:input[class^=search_query]'.</msg>
+<status status="PASS" starttime="20210307 22:48:35.885" endtime="20210307 22:48:35.895"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[class^=login]</arg>
+</arguments>
+<msg timestamp="20210307 22:48:35.895" level="INFO">Clicking element 'css:a[class^=login]'.</msg>
+<status status="PASS" starttime="20210307 22:48:35.895" endtime="20210307 22:48:37.353"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#email_create</arg>
+</arguments>
+<msg timestamp="20210307 22:48:37.366" level="INFO">Current page contains element 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210307 22:48:37.353" endtime="20210307 22:48:37.366"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -49,31 +160,31 @@
 <arg>css=#email_create</arg>
 <arg>${valide_email}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:50.885" level="INFO">Typing text 'test1117@demo.com' into text field 'css=#email_create'.</msg>
-<status status="PASS" starttime="20210307 22:28:50.884" endtime="20210307 22:28:51.056"></status>
+<msg timestamp="20210307 22:48:37.367" level="INFO">Typing text 'test1118@demo.com' into text field 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210307 22:48:37.367" endtime="20210307 22:48:37.546"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>css=#SubmitCreate</arg>
 </arguments>
-<msg timestamp="20210307 22:28:51.056" level="INFO">Clicking element 'css=#SubmitCreate'.</msg>
-<status status="PASS" starttime="20210307 22:28:51.056" endtime="20210307 22:28:51.104"></status>
+<msg timestamp="20210307 22:48:37.546" level="INFO">Clicking element 'css=#SubmitCreate'.</msg>
+<status status="PASS" starttime="20210307 22:48:37.546" endtime="20210307 22:48:37.596"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Your personal information</arg>
 </arguments>
-<status status="PASS" starttime="20210307 22:28:51.104" endtime="20210307 22:28:53.004"></status>
+<status status="PASS" starttime="20210307 22:48:37.597" endtime="20210307 22:48:39.526"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>css=#id_gender1</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.005" level="INFO">Clicking element 'css=#id_gender1'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.004" endtime="20210307 22:28:53.045"></status>
+<msg timestamp="20210307 22:48:39.526" level="INFO">Clicking element 'css=#id_gender1'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.526" endtime="20210307 22:48:39.569"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -81,8 +192,8 @@
 <arg>css=#customer_firstname</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.046" level="INFO">Typing text 'Mithun' into text field 'css=#customer_firstname'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.046" endtime="20210307 22:28:53.163"></status>
+<msg timestamp="20210307 22:48:39.569" level="INFO">Typing text 'Mithun' into text field 'css=#customer_firstname'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.569" endtime="20210307 22:48:39.691"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -90,8 +201,8 @@
 <arg>css=#customer_lastname</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.163" level="INFO">Typing text 'Suresh' into text field 'css=#customer_lastname'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.163" endtime="20210307 22:28:53.241"></status>
+<msg timestamp="20210307 22:48:39.692" level="INFO">Typing text 'Suresh' into text field 'css=#customer_lastname'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.692" endtime="20210307 22:48:39.767"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -99,32 +210,32 @@
 <arg>css=#passwd</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.241" level="INFO">Typing text 'Test1234' into text field 'css=#passwd'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.241" endtime="20210307 22:28:53.332"></status>
+<msg timestamp="20210307 22:48:39.767" level="INFO">Typing text 'Test1234' into text field 'css=#passwd'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.767" endtime="20210307 22:48:39.862"></status>
 </kw>
 <kw name="Page Should Contain List" library="SeleniumLibrary">
 <doc>Verifies selection list ``locator`` is found from current page.</doc>
 <arguments>
 <arg>css=#days</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.345" level="INFO">Current page contains list 'css=#days'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.333" endtime="20210307 22:28:53.346"></status>
+<msg timestamp="20210307 22:48:39.874" level="INFO">Current page contains list 'css=#days'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.863" endtime="20210307 22:48:39.875"></status>
 </kw>
 <kw name="Page Should Contain List" library="SeleniumLibrary">
 <doc>Verifies selection list ``locator`` is found from current page.</doc>
 <arguments>
 <arg>css=#months</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.358" level="INFO">Current page contains list 'css=#months'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.346" endtime="20210307 22:28:53.358"></status>
+<msg timestamp="20210307 22:48:39.887" level="INFO">Current page contains list 'css=#months'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.875" endtime="20210307 22:48:39.887"></status>
 </kw>
 <kw name="Page Should Contain List" library="SeleniumLibrary">
 <doc>Verifies selection list ``locator`` is found from current page.</doc>
 <arguments>
 <arg>css=#years</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.370" level="INFO">Current page contains list 'css=#years'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.358" endtime="20210307 22:28:53.370"></status>
+<msg timestamp="20210307 22:48:39.900" level="INFO">Current page contains list 'css=#years'.</msg>
+<status status="PASS" starttime="20210307 22:48:39.887" endtime="20210307 22:48:39.900"></status>
 </kw>
 <kw name="Select From List By Value" library="SeleniumLibrary">
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
@@ -132,8 +243,8 @@
 <arg>css=#days</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.370" level="INFO">Selecting options from selection list 'css=#days' by value 1.</msg>
-<status status="PASS" starttime="20210307 22:28:53.370" endtime="20210307 22:28:53.445"></status>
+<msg timestamp="20210307 22:48:39.900" level="INFO">Selecting options from selection list 'css=#days' by value 1.</msg>
+<status status="PASS" starttime="20210307 22:48:39.900" endtime="20210307 22:48:39.977"></status>
 </kw>
 <kw name="Select From List By Index" library="SeleniumLibrary">
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
@@ -141,8 +252,8 @@
 <arg>css=#months</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.445" level="INFO">Selecting options from selection list 'css=#months' by index 1.</msg>
-<status status="PASS" starttime="20210307 22:28:53.445" endtime="20210307 22:28:53.507"></status>
+<msg timestamp="20210307 22:48:39.978" level="INFO">Selecting options from selection list 'css=#months' by index 1.</msg>
+<status status="PASS" starttime="20210307 22:48:39.977" endtime="20210307 22:48:40.052"></status>
 </kw>
 <kw name="Select From List By Value" library="SeleniumLibrary">
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
@@ -150,8 +261,8 @@
 <arg>css=#years</arg>
 <arg>1950</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.508" level="INFO">Selecting options from selection list 'css=#years' by value 1950.</msg>
-<status status="PASS" starttime="20210307 22:28:53.507" endtime="20210307 22:28:53.623"></status>
+<msg timestamp="20210307 22:48:40.052" level="INFO">Selecting options from selection list 'css=#years' by value 1950.</msg>
+<status status="PASS" starttime="20210307 22:48:40.052" endtime="20210307 22:48:40.160"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -159,8 +270,8 @@
 <arg>css=#firstname</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.623" level="INFO">Typing text 'Mithun' into text field 'css=#firstname'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.623" endtime="20210307 22:28:53.747"></status>
+<msg timestamp="20210307 22:48:40.161" level="INFO">Typing text 'Mithun' into text field 'css=#firstname'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.161" endtime="20210307 22:48:40.281"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -168,8 +279,8 @@
 <arg>css=#lastname</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.747" level="INFO">Typing text 'Suresh' into text field 'css=#lastname'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.747" endtime="20210307 22:28:53.841"></status>
+<msg timestamp="20210307 22:48:40.281" level="INFO">Typing text 'Suresh' into text field 'css=#lastname'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.281" endtime="20210307 22:48:40.378"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -177,8 +288,8 @@
 <arg>css=#company</arg>
 <arg>${company}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.842" level="INFO">Typing text 'Company1' into text field 'css=#company'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.842" endtime="20210307 22:28:53.927"></status>
+<msg timestamp="20210307 22:48:40.378" level="INFO">Typing text 'Company1' into text field 'css=#company'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.378" endtime="20210307 22:48:40.470"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -186,8 +297,8 @@
 <arg>css=#address1</arg>
 <arg>${address1}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.928" level="INFO">Typing text 'Street 1' into text field 'css=#address1'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.927" endtime="20210307 22:28:53.995"></status>
+<msg timestamp="20210307 22:48:40.471" level="INFO">Typing text 'Street 1' into text field 'css=#address1'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.471" endtime="20210307 22:48:40.542"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -195,8 +306,8 @@
 <arg>css=#city</arg>
 <arg>${city}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:53.996" level="INFO">Typing text 'Chicago' into text field 'css=#city'.</msg>
-<status status="PASS" starttime="20210307 22:28:53.996" endtime="20210307 22:28:54.066"></status>
+<msg timestamp="20210307 22:48:40.543" level="INFO">Typing text 'Chicago' into text field 'css=#city'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.542" endtime="20210307 22:48:40.611"></status>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
@@ -204,8 +315,8 @@
 <arg>css=#id_state</arg>
 <arg>Illinois</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.067" level="INFO">Selecting options from selection list 'css=#id_state' by label Illinois.</msg>
-<status status="PASS" starttime="20210307 22:28:54.066" endtime="20210307 22:28:54.144"></status>
+<msg timestamp="20210307 22:48:40.612" level="INFO">Selecting options from selection list 'css=#id_state' by label Illinois.</msg>
+<status status="PASS" starttime="20210307 22:48:40.612" endtime="20210307 22:48:40.684"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -213,8 +324,8 @@
 <arg>css=#postcode</arg>
 <arg>${postcode}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.145" level="INFO">Typing text '60606' into text field 'css=#postcode'.</msg>
-<status status="PASS" starttime="20210307 22:28:54.144" endtime="20210307 22:28:54.238"></status>
+<msg timestamp="20210307 22:48:40.685" level="INFO">Typing text '60606' into text field 'css=#postcode'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.685" endtime="20210307 22:48:40.785"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -222,8 +333,8 @@
 <arg>css=#phone</arg>
 <arg>${phone}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.239" level="INFO">Typing text '1234567890' into text field 'css=#phone'.</msg>
-<status status="PASS" starttime="20210307 22:28:54.238" endtime="20210307 22:28:54.330"></status>
+<msg timestamp="20210307 22:48:40.786" level="INFO">Typing text '1234567890' into text field 'css=#phone'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.785" endtime="20210307 22:48:40.889"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -231,15 +342,15 @@
 <arg>css=#phone_mobile</arg>
 <arg>${phone_mobile}</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.330" level="INFO">Typing text '1234567890' into text field 'css=#phone_mobile'.</msg>
-<status status="PASS" starttime="20210307 22:28:54.330" endtime="20210307 22:28:54.407"></status>
+<msg timestamp="20210307 22:48:40.890" level="INFO">Typing text '1234567890' into text field 'css=#phone_mobile'.</msg>
+<status status="PASS" starttime="20210307 22:48:40.890" endtime="20210307 22:48:40.965"></status>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
 <arguments>
 <arg>css=#alias</arg>
 </arguments>
-<status status="PASS" starttime="20210307 22:28:54.408" endtime="20210307 22:28:54.449"></status>
+<status status="PASS" starttime="20210307 22:48:40.965" endtime="20210307 22:48:41.005"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -247,47 +358,47 @@
 <arg>css=#alias</arg>
 <arg>Home address</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.449" level="INFO">Typing text 'Home address' into text field 'css=#alias'.</msg>
-<status status="PASS" starttime="20210307 22:28:54.449" endtime="20210307 22:28:54.549"></status>
+<msg timestamp="20210307 22:48:41.005" level="INFO">Typing text 'Home address' into text field 'css=#alias'.</msg>
+<status status="PASS" starttime="20210307 22:48:41.005" endtime="20210307 22:48:41.104"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>css=#submitAccount</arg>
 </arguments>
-<msg timestamp="20210307 22:28:54.549" level="INFO">Clicking button 'css=#submitAccount'.</msg>
-<status status="PASS" starttime="20210307 22:28:54.549" endtime="20210307 22:28:56.500"></status>
+<msg timestamp="20210307 22:48:41.105" level="INFO">Clicking button 'css=#submitAccount'.</msg>
+<status status="PASS" starttime="20210307 22:48:41.105" endtime="20210307 22:48:42.586"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>My account</arg>
 </arguments>
-<msg timestamp="20210307 22:28:56.518" level="INFO">Current page contains text 'My account'.</msg>
-<status status="PASS" starttime="20210307 22:28:56.500" endtime="20210307 22:28:56.518"></status>
+<msg timestamp="20210307 22:48:42.604" level="INFO">Current page contains text 'My account'.</msg>
+<status status="PASS" starttime="20210307 22:48:42.586" endtime="20210307 22:48:42.604"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css:a[class^=logout]</arg>
 </arguments>
-<msg timestamp="20210307 22:28:56.527" level="INFO">Current page contains element 'css:a[class^=logout]'.</msg>
-<status status="PASS" starttime="20210307 22:28:56.518" endtime="20210307 22:28:56.527"></status>
+<msg timestamp="20210307 22:48:42.613" level="INFO">Current page contains element 'css:a[class^=logout]'.</msg>
+<status status="PASS" starttime="20210307 22:48:42.604" endtime="20210307 22:48:42.613"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//a[@href="http://automationpractice.com/index.php?controller=identity"]</arg>
 </arguments>
-<msg timestamp="20210307 22:28:56.527" level="INFO">Clicking element 'xpath=//a[@href="http://automationpractice.com/index.php?controller=identity"]'.</msg>
-<status status="PASS" starttime="20210307 22:28:56.527" endtime="20210307 22:28:57.264"></status>
+<msg timestamp="20210307 22:48:42.613" level="INFO">Clicking element 'xpath=//a[@href="http://automationpractice.com/index.php?controller=identity"]'.</msg>
+<status status="PASS" starttime="20210307 22:48:42.613" endtime="20210307 22:48:43.595"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Please be sure to update your personal information if it has changed.</arg>
 </arguments>
-<status status="PASS" starttime="20210307 22:28:57.264" endtime="20210307 22:28:57.276"></status>
+<status status="PASS" starttime="20210307 22:48:43.595" endtime="20210307 22:48:43.606"></status>
 </kw>
 <kw name="Get Value" library="SeleniumLibrary">
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
@@ -297,8 +408,8 @@
 <assign>
 <var>${compare_name}</var>
 </assign>
-<msg timestamp="20210307 22:28:57.287" level="INFO">${compare_name} = Mithun</msg>
-<status status="PASS" starttime="20210307 22:28:57.276" endtime="20210307 22:28:57.287"></status>
+<msg timestamp="20210307 22:48:43.616" level="INFO">${compare_name} = Mithun</msg>
+<status status="PASS" starttime="20210307 22:48:43.606" endtime="20210307 22:48:43.617"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -306,41 +417,43 @@
 <arg>${compare_name}</arg>
 <arg>Mithun</arg>
 </arguments>
-<status status="PASS" starttime="20210307 22:28:57.287" endtime="20210307 22:28:57.287"></status>
+<status status="PASS" starttime="20210307 22:48:43.617" endtime="20210307 22:48:43.617"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>css:a[class^=logout]</arg>
 </arguments>
-<msg timestamp="20210307 22:28:57.288" level="INFO">Clicking element 'css:a[class^=logout]'.</msg>
-<status status="PASS" starttime="20210307 22:28:57.288" endtime="20210307 22:28:58.621"></status>
+<msg timestamp="20210307 22:48:43.617" level="INFO">Clicking element 'css:a[class^=logout]'.</msg>
+<status status="PASS" starttime="20210307 22:48:43.617" endtime="20210307 22:48:44.786"></status>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210307 22:28:58.621" endtime="20210307 22:28:58.714"></status>
+<status status="PASS" starttime="20210307 22:48:44.786" endtime="20210307 22:48:44.883"></status>
 </kw>
 <tags>
 <tag>ValidLogin</tag>
 </tags>
-<status status="PASS" starttime="20210307 22:28:34.547" endtime="20210307 22:28:58.714" critical="yes"></status>
+<status status="PASS" starttime="20210307 22:48:29.652" endtime="20210307 22:48:44.884" critical="yes"></status>
 </test>
 <doc>This test covers basic features for the website regression test</doc>
-<status status="PASS" starttime="20210307 22:28:34.408" endtime="20210307 22:28:58.716"></status>
+<status status="PASS" starttime="20210307 22:48:17.252" endtime="20210307 22:48:44.885"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">InvalidLogin</stat>
+<stat pass="1" fail="0">SiteEntry</stat>
 <stat pass="1" fail="0">ValidLogin</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Main">Main</stat>
+<stat pass="3" fail="0" id="s1" name="Main">Main</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210307 22:28:34.546" level="ERROR">Error in file '/Users/msuresh/PycharmProjects/automationdemo/tests/main.robot' on line 4: Error in file '/Users/msuresh/PycharmProjects/automationdemo/resources/demo.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20210307 22:48:17.403" level="ERROR">Error in file '/Users/msuresh/PycharmProjects/automationdemo/tests/main.robot' on line 4: Error in file '/Users/msuresh/PycharmProjects/automationdemo/resources/demo.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
