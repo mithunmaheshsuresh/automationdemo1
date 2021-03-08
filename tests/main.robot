@@ -19,24 +19,24 @@ ${phone_mobile} =  1234567890
 
 
 *** Test Cases ***
-#User is able to navigate to website and view the content
-#    [Tags]  SiteEntry
-#    Open Browser  http://automationpractice.com/index.php  chrome
-#    page should contain element  css:img.logo
-#    page should contain element  css:input[class^=search_query]
-#    Close All Browsers
+User is able to navigate to website and view the content
+    [Tags]  SiteEntry
+    Open Browser  http://automationpractice.com/index.php  chrome
+    page should contain element  css:img.logo
+    page should contain element  css:input[class^=search_query]
+    Close All Browsers
 
-#Already registered user is not allowed to register
-#    [Tags]  InvalidLogin
-#    Open Browser  http://automationpractice.com/index.php  chrome
-#    page should contain element  css:img.logo
-#    page should contain element  css:input[class^=search_query]
-#    Click Element   css:a[class^=login]
-#    page should contain element  css=#email_create
-#    Input Text  css=#email_create  test@demo.com
-#    Click Element  css=#SubmitCreate
-#    Wait Until Element Contains  css=#create_account_error > ol > li  An account using this email address has already been registered. Please enter a valid password or request a new one.
-#    Close All Browsers
+Already registered user is not allowed to register
+    [Tags]  InvalidLogin
+    Open Browser  http://automationpractice.com/index.php  chrome
+    page should contain element  css:img.logo
+    page should contain element  css:input[class^=search_query]
+    Click Element   css:a[class^=login]
+    page should contain element  css=#email_create
+    Input Text  css=#email_create  test@demo.com
+    Click Element  css=#SubmitCreate
+    Wait Until Element Contains  css=#create_account_error > ol > li  An account using this email address has already been registered. Please enter a valid password or request a new one.
+    Close All Browsers
 
 
 Verify user is able to register with valid credentials
