@@ -21,11 +21,9 @@
   after RESTinstance during installation [ --ignore-installed six ]
 Usage
 
-Step 1: Clone the git repository
+Step 1: Clone the git repository : https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
-Step 2: How to run the robot test
-
-Step 3: Go to terminal --> project folder --> type in the following command
+Step 2: Go to terminal --> project folder --> type in the following command
 
 
  
