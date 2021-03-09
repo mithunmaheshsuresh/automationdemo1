@@ -1,7 +1,7 @@
 # automationdemo1
-Installation
+- Automated using robotframework.
 
-# for MAC OS
+### Installation for MAC OS
 1.brew install python
 2.brew install chromedriver
 
