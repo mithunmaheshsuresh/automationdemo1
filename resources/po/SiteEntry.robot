@@ -1,18 +1,20 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  DatabaseLibrary
-Library  ../custom_libs/server_ip.py
+Library  FakerLibrary
+Library  ../custom_libs/fakeData.py
 
 *** Variables ***
 
 *** Keywords ***
 Navigate to test website
-    Open Browser  http://automationpractice.com/index.php  chrome
+    [Arguments]  ${Website}  ${BROWSER}
+    Open Browser  ${Website}  ${BROWSER}
 
-Navigate to prod website
-    [Arguments]  ${BRAND}
-    Set Up Production URL Variables  ${BRAND}
-    Go To  ${START_URL}
-    log to console  ${START_URL}
+Verify the content
+    Wait Until Element Is Visible  css:img.logo
+    page should contain element  css:img.logo
+    page should contain element  css:input[class^=search_query]
+
 
 
