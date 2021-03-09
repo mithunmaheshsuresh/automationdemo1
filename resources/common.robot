@@ -1,9 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  OperatingSystem
-Library  DatabaseLibrary
-Library  Process
-Library  custom_libs/browserstack.py
+
+
 
 *** Variables ***
 ${BROWSER}                      Chrome
@@ -29,13 +28,6 @@ ${phone_mobile} =  1234567890
 
 
 ###COMMON KEYWORDS###
-Common Setup
-    [Arguments]  ${db_user}
-    Open Browser  about:blank  ${BROWSER}  alias=main
-#    Set Selenium Speed  ${DELAY}
-    set selenium timeout  ${TIMEOUT}
-
-
 
 Desktop Setup
     Set Window Size  1920  1080
@@ -46,7 +38,7 @@ End Test
     Run Keyword If Test Failed  Capture Page Screenshot
     Close All Browsers
     Terminate All Processes
-    run keyword and continue on failure  disconnect from database
+
 
 ###TEST ENVIRONMENT SETUP###
 
