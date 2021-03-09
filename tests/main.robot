@@ -8,7 +8,7 @@ Resource  ../resources/demo.robot
 *** Variables ***
 ${firstname} =   Mithun
 ${lastname} =  Suresh
-${valide_email} =  test1118@demo.com
+${valide_email} =  test1128@demo.com
 ${password} =  Test1234
 ${company} =  Company1
 ${address1} =  Street 1
