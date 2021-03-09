@@ -13,7 +13,7 @@ ${TIMEOUT}                      30 seconds
 ${Website} =    http://automationpractice.com/index.php
 ${firstname} =   Mithun
 ${lastname} =  Suresh
-${valide_email} =  test1159@demo.com
+${valide_email} =  test1178@demo.com
 ${password} =  Test1234
 ${company} =  Company1
 ${address1} =  Street 1
