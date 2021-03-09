@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Library  OperatingSystem
 Library  DatabaseLibrary
-Resource  ../data/environment.robot
 Library  Process
 Library  custom_libs/browserstack.py
 
@@ -15,7 +14,7 @@ ${TIMEOUT}                      30 seconds
 ${Website} =    http://automationpractice.com/index.php
 ${firstname} =   Mithun
 ${lastname} =  Suresh
-${valide_email} =  test1149@demo.com
+${valide_email} =  test1159@demo.com
 ${password} =  Test1234
 ${company} =  Company1
 ${address1} =  Street 1
