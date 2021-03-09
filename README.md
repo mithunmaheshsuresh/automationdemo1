@@ -1,6 +1,7 @@
 # automationdemo1
 Installation
 
+# for MAC OS
 1.brew install python
 2.brew install chromedriver
 
@@ -10,7 +11,11 @@ Installation
   brew install geckodriver
   brew install chromedriver
   pip install selenium
-  
+ 
+
+### Installation for Windows
+
+ - Download latest python from https://www.python.org/ 
   
   Note : Incase, face with the error to uninstallation of 'six', please add this section 
   after RESTinstance during installation [ --ignore-installed six ]
