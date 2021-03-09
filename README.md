@@ -5,10 +5,12 @@ Installation
 2.brew install chromedriver
 
 ##PYTHON PACKAGES
-  pip install robotframework 
-  pip install robotframework-seleniumlibrary 
+  pip install robotframework
+  pip install robotframework-seleniumlibrary
+  brew install geckodriver
+  brew install chromedriver
   pip install selenium
-  pip install --upgrade RESTinstance
+  
   
   Note : Incase, face with the error to uninstallation of 'six', please add this section 
   after RESTinstance during installation [ --ignore-installed six ]
@@ -20,7 +22,6 @@ Step 2: How to run the robot test
 
 Step 3: Go to terminal --> project folder --> type in the following command
 
-Note : The variables and API requests can be populated in a separate file and referenced in the test case file as this would help in better maintenance. For now, it has been directly provided in the test case file
 
  
 ### Robot Framework Tests
